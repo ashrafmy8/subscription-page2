@@ -2,37 +2,58 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Subscribe to Our Service</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-  <script>
-    function redirectToWhatsApp() {
-      setTimeout(function () {
-        window.location.href = "https://wa.me/256750625684?text=Hi%2C%20I%20have%20submitted%20my%20details%20and%20am%20interested%20in%20a%20subscription.";
-      }, 1000);
+  <style>
+    /* Simple fade-in animation */
+    .fade-in {
+      animation: fadeIn 1s ease-in-out both;
     }
-  </script>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
-  <div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg">
-    <h1 class="text-2xl font-bold mb-4 text-center">📲 Subscribe to Our Service</h1>
-    <form action="https://formsubmit.co/mutyabaashrafssemakula@outlook.com" method="POST" class="space-y-4" onsubmit="redirectToWhatsApp()">
+  <div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg fade-in">
+    
+    <!-- SVG Graphic -->
+    <div class="flex justify-center mb-4">
+      <img src="https://www.svgrepo.com/show/429086/mobile-contact.svg" alt="Subscribe Icon" class="w-24 h-24">
+    </div>
+
+    <h1 class="text-2xl font-bold mb-4 text-center text-green-700">📲 Subscribe to Our Service</h1>
+
+    <form action="https://formsubmit.co/mutyabaashrafssemakula@outlook.com" method="POST" class="space-y-4">
+      <!-- Hidden Inputs -->
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="Source Form" value="Landing Page B">
-      <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://wa.me/256750625684?text=Hi%2C%20I%20have%20submitted%20my%20details%20and%20am%20interested%20in%20a%20subscription.">
 
+      <!-- Full Name -->
       <div>
-        <label class="block font-semibold mb-1">Full Name</label>
-        <input type="text" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Your Name">
+        <label for="name" class="block font-semibold mb-1">Full Name</label>
+        <input id="name" type="text" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Your Name">
       </div>
+
+      <!-- Phone Number -->
       <div>
-        <label class="block font-semibold mb-1">Phone Number</label>
-        <input type="tel" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="e.g. 07XXXXXXXX">
+        <label for="phone" class="block font-semibold mb-1">Phone Number</label>
+        <input id="phone" type="tel" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="e.g. 0750123456">
       </div>
+
+      <!-- Serial Number -->
       <div>
-        <label class="block font-semibold mb-1">Choose a Package</label>
-        <select name="package" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+        <label for="serial" class="block font-semibold mb-1">Serial Number</label>
+        <input id="serial" type="text" name="serial" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Enter your device serial number">
+      </div>
+
+      <!-- Package Selection -->
+      <div>
+        <label for="package" class="block font-semibold mb-1">Choose a Package</label>
+        <select id="package" name="package" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
           <option value="">-- Select Package --</option>
           <option value="1 Month - 30,000 UGX">1 Month - 30,000 UGX</option>
           <option value="3 Months - 72,000 UGX">3 Months - 72,000 UGX</option>
@@ -40,10 +61,14 @@
           <option value="12 Months - 210,000 UGX">12 Months - 210,000 UGX</option>
         </select>
       </div>
+
+      <!-- Referral Source -->
       <div>
-        <label class="block font-semibold mb-1">Referral Source (optional)</label>
-        <input type="text" name="referral" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="e.g. WhatsApp group">
+        <label for="referral" class="block font-semibold mb-1">Referral Source (optional)</label>
+        <input id="referral" type="text" name="referral" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="e.g. WhatsApp group">
       </div>
+
+      <!-- MTN and MoMo Pay Info -->
       <div>
         <label class="block font-semibold mb-1">MTN MoMo Pay To:</label>
         <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
@@ -51,9 +76,13 @@
           <p>Name: <strong>Mutyaba Ashraf Ssemakula</strong></p>
         </div>
       </div>
-      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700">Submit</button>
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300">Submit</button>
     </form>
+
     <p class="text-sm text-center mt-4 text-gray-600">We will contact you shortly after submission.</p>
   </div>
 </body>
 </html>
+
