@@ -1,11 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thank You for Subscribing</title>
+  <title>Subscribe to Our Service</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
+    /* Simple fade-in animation */
     .fade-in {
       animation: fadeIn 1s ease-in-out both;
     }
@@ -16,24 +18,67 @@
   </style>
 </head>
 <body class="bg-gray-100 font-sans">
-  <div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg fade-in text-center">
+  <div class="max-w-xl mx-auto mt-10 p-6 bg-white rounded-2xl shadow-lg fade-in">
 
-    <h1 class="text-3xl font-bold mb-4 text-green-700">🎉 Thank You for Subscribing!</h1>
-    <p class="mb-6 text-gray-700 text-lg">We appreciate your subscription. We will contact you shortly.</p>
+    <!-- Removed SVG Graphic (Subscribe Icon) -->
 
-    <a
-      href="https://wa.me/256750625684"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="inline-flex items-center justify-center px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition duration-300"
-      aria-label="Chat with us on WhatsApp"
-    >
-      <svg class="w-6 h-6 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <path d="M20.52 3.48a11.828 11.828 0 0 0-16.71 0c-4.62 4.62-4.62 12.13 0 16.75L2 22l2.3-1.18a11.828 11.828 0 0 0 16.71-16.34zm-8.48 15.02a8.02 8.02 0 0 1-4.2-1.15l-.3-.18-2.5.62.67-2.43-.2-.31a8.004 8.004 0 1 1 6.54 3.45zm4.26-4.38c-.23-.12-1.35-.67-1.56-.75-.21-.08-.37-.12-.53.12-.16.23-.63.75-.77.9-.14.16-.28.18-.52.06-.23-.12-1-.37-1.9-1.17-.7-.62-1.17-1.39-1.31-1.62-.14-.23-.01-.35.1-.46.1-.1.23-.28.35-.43.12-.14.16-.23.23-.38.08-.14.04-.27-.02-.39-.06-.12-.53-1.27-.73-1.74-.19-.46-.39-.4-.53-.4-.14 0-.3-.02-.46-.02-.15 0-.39.06-.59.28-.2.23-.77.75-.77 1.82 0 1.07.79 2.11.9 2.26.12.14 1.55 2.37 3.76 3.32.53.23.94.37 1.26.48.53.18 1.01.15 1.39.09.42-.07 1.35-.55 1.54-1.08.19-.53.19-.98.14-1.07-.04-.09-.15-.14-.39-.25z"/>
-      </svg>
-      Chat with us on WhatsApp
-    </a>
+    <h1 class="text-2xl font-bold mb-4 text-center text-green-700">📲 Subscribe to Our Service</h1>
 
+    <form action="https://formsubmit.co/mutyabaashrafssemakula@outlook.com" method="POST" class="space-y-4">
+      <!-- Hidden Inputs -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="Source Form" value="Landing Page B">
+      <input type="hidden" name="_next" value="https://wa.me/256750625684?text=Hi%2C%20I%20have%20submitted%20my%20details%20and%20am%20interested%20in%20a%20subscription.">
+
+      <!-- Full Name -->
+      <div>
+        <label for="name" class="block font-semibold mb-1">Full Name</label>
+        <input id="name" type="text" name="name" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Your Name">
+      </div>
+
+      <!-- Phone Number -->
+      <div>
+        <label for="phone" class="block font-semibold mb-1">Phone Number</label>
+        <input id="phone" type="tel" name="phone" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="e.g. 0750123456">
+      </div>
+
+      <!-- Serial Number -->
+      <div>
+        <label for="serial" class="block font-semibold mb-1">Serial Number</label>
+        <input id="serial" type="text" name="serial" required class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="Enter your device serial number">
+      </div>
+
+      <!-- Package Selection -->
+      <div>
+        <label for="package" class="block font-semibold mb-1">Choose a Package</label>
+        <select id="package" name="package" required class="w-full border border-gray-300 rounded-lg px-4 py-2">
+          <option value="">-- Select Package --</option>
+          <option value="3 Months - 72,000 UGX">3 Months - 72,000 UGX</option>
+          <option value="6 Months - 130,000 UGX">6 Months - 130,000 UGX</option>
+          <option value="12 Months - 210,000 UGX">12 Months - 210,000 UGX</option>
+        </select>
+      </div>
+
+      <!-- Referral Source -->
+      <div>
+        <label for="referral" class="block font-semibold mb-1">Referral Source (optional)</label>
+        <input id="referral" type="text" name="referral" class="w-full border border-gray-300 rounded-lg px-4 py-2" placeholder="e.g. WhatsApp group">
+      </div>
+
+      <!-- MTN AND AIRTEL MoMo Pay Info -->
+      <div>
+        <label class="block font-semibold mb-1">MTN AND AIRTEL MoMo Pay To:</label>
+        <div class="bg-gray-100 p-3 rounded-lg text-gray-700">
+          <p><strong>0750 625684</strong></p>
+          <p>Name: <strong>Mutyaba Ashraf Ssemakula</strong></p>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg font-semibold hover:bg-green-700 transition duration-300">Submit</button>
+    </form>
+
+    <p class="text-sm text-center mt-4 text-gray-600">We will contact you shortly after submission.</p>
   </div>
 </body>
 </html>
